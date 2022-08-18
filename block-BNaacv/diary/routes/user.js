@@ -6,23 +6,20 @@ router.get('/new', (req, res)=> {
 })
 // add new user
 router.post('/', (req, res) => {
-    var store = ''
-    req.on('data',(chunk) => {
-        store += chunk;
-    })
-    req.on('end',() => {
-        res.send(store);
-    });
-
+    res.send(req.body)
 })
 // list users
 router.get('/', (req, res) => {
-    res.json(req.body);
+    res.render('users.ejs')
 });
 // get specific user
 router.get('/:id', (req, res) => {
     res.render('singleUser', { user: { name: "Charlie", email: "Charliechris@gmail.com", age : 22 } });
 })
+// edit form
+router.get('/:id/edit', (req, res) => {
+    res.render('userForm')
+});
 // updated user
 router.put('/' , (req, res) => {
     res.render('updatedUser', {user : req.body});
