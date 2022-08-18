@@ -7,7 +7,7 @@ var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 
 // connect to database
-mongoose.connect("mongodb://127.0.0.1:27017/server", (err) => {
+mongoose.connect("mongodb://127.0.0.1:27017/user", (err) => {
     console.log(err ? err : "Connected to database")
 })
 // instantiate the express

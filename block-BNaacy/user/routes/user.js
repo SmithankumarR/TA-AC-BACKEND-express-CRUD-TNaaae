@@ -1,21 +1,16 @@
 var express = require('express');
-var User = require('../models/users');
 var router = express.Router();
+var User = require('../models/users');
 
 router.get('/new', (req,res) => {
-    res.render('users')
+    res.render('usersForm')
 });
 
-router.post('/' ,(req,res,next) => {
-    console.log(req.body);
+router.post('/' ,(req,res) => {
     User.create(req.body,(err,userCreated) => {
-        if(err) return next(err);
-        res.send(userCreated);
+        if(err) return res.redirect('/users/new');
+        res.redirect('/');
     })
 });
-
-router
-
-
-
-module.exports = router;
+ 
+module.exports = router; 
