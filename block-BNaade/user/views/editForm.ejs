@@ -16,8 +16,7 @@
             background-color: orange;
             color: white;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 1.5rem;
         }
 
         form {
@@ -29,11 +28,6 @@
             border-radius: 1rem;
         }
 
-        div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
         label {
             color: rgb(3, 3, 13);
@@ -75,10 +69,10 @@
 
 <body>
     <header>
-        <nav class="flex">
+        <nav>
             <ul class="flex">
                 <li>
-                    <a href="user.html" target="_blank"> User Diary</a>
+                    <a href="user.ejs" target="_blank"> User Diary</a>
                 </li>
                 <li>
                     <a href="usersForm.ejs" target="_blank">Add User</a>
@@ -87,7 +81,7 @@
         </nav>
     </header>
     <h1>User From</h1>
-    <form action="/users/<%= user.id %>/edit" method="POST">
+    <form action="/users/<%= user.id %>" method="POST">
         <div>
             <label for="name">Name :</label>
             <input type="text" name="name" placeholder="Name" value=" <%= user.name %>">
@@ -95,10 +89,6 @@
         <div>
             <label for="email">Email :</label>
             <input type="email" name="email" placeholder="Email" value="<%= user.email %>" />
-        </div>
-        <div>
-            <label for="age">Age :</label>
-            <input type="number" name=" age" placeholder="Age" value="<%= user.age %>" />
         </div>
         <div>
             <label for="description">Description :</label>

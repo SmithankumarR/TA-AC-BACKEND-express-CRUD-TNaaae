@@ -13,7 +13,7 @@
         header {
             background-color: orange;
             color: rgb(7, 3, 3);
-            padding: 0.5rem;
+            padding: 1.5rem;
         }
 
         h1 {
@@ -33,22 +33,23 @@
         }
 
         a {
-            color: rgb(11, 8, 8);
+            color: rgb(251, 246, 246);
             text-decoration: none;
             font-weight: 600;
             text-transform: uppercase;
             margin: 0 8rem;
         }
         article{
-            background-color: rgb(244, 162, 242);
+            background-color: rgb(249, 188, 248);
             color: rgb(10, 2, 2);
             margin: 0 auto;
-            border: 2px solid;
             padding: 2rem;
+            width: 100vw;
         }
         .details{
             display: block;
             max-width: 300px;
+            background-color: rgb(67, 177, 177);
             margin: 3rem auto;
             border-radius: 1rem;
             border: 2px solid black;
@@ -73,7 +74,7 @@
         <nav>
             <ul class = "flex">
                 <li>
-                    <a href="users" target="_blank"> User Diary</a>
+                    <a href="user.ejs" target="_blank"> User Diary</a>
                 </li>
                 <li>
                     <a href="users/new" target="_blank">Add User</a>
@@ -88,8 +89,8 @@
             <h4> Email :  <%= user.email %>
         </h4>
             <p>Description : <%= user.description %> </p>
-            <a href="/books/<%= user.id %>/edit">
-                <button class="btn">Update User</button>
+            <a href="/users/<%= user.id %>/edit">
+                <button class="btn">Edit</button>
             </a>
         </div>
     </article>
