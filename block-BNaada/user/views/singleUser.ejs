@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: orange;
+            color: white;
+            padding: 0.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: rgb(4, 3, 8);
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+       
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: rgb(11, 8, 8);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0 8rem;
+        }
+        article{
+            background-color: orchid;
+            color: white;
+            border-radius: 2rem;
+            margin: 0 auto;
+            border: 2px solid;
+            padding: 2rem;
+        }
+        .details{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class = "flex">
+                <li>
+                    <a href="users" target="_blank"> User Diary</a>
+                </li>
+                <li>
+                    <a href="users/new" target="_blank">Add User</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <h1>UserDetails Page</h1>
+        <div class="details">
+            <h2>UserName : <%= user.name %> </h2>
+            <p> Email :  <%= user.email %></p>
+            <p>Description : <%= user.description %> </p>
+        </div>
+    </article>
+</body>
+</html>
