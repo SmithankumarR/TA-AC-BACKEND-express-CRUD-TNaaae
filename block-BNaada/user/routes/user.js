@@ -13,18 +13,17 @@ router.post('/' ,(req,res) => {
     })
 });
  router.get('/',(req, res,next) => {
-     User.find({}, (err,user) => {
-        console.log(user)
+     User.find({}, (err,users) => {
+        console.log(users)
         if(err) return next(err);
-        res.render('alluser', {user: user});
-        res.send(user)
+        res.render('user', {users: users });
     })
  });
  router.get('/:id',(req, res, next) => {
     var id = req.params.id;
     User.findById(id, (err, user) => {
         if(err) return next(err);
-        res.render('singleUser')
+        res.render('singleUser', {user: user})
     })
  })
 module.exports = router; 
