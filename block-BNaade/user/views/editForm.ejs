@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: orange;
+            color: white;
+            display: flex;
+            padding: 1.5rem;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 3rem auto;
+            padding: 3rem;
+            background-color: rgb(248, 183, 194);
+            border: 2px solid rgb(1, 1, 10);
+            border-radius: 1rem;
+        }
+
+
+        label {
+            color: rgb(3, 3, 13);
+            text-transform: capitalize;
+            font-size: 1.6rem;
+        }
+
+        input {
+            padding: 0.75rem 2rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+            border: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: red;
+            margin-top: 2rem;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="flex">
+                <li>
+                    <a href="user.ejs" target="_blank"> User Diary</a>
+                </li>
+                <li>
+                    <a href="usersForm.ejs" target="_blank">Add User</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>User From</h1>
+    <form action="/users/<%= user.id %>" method="POST">
+        <div>
+            <label for="name">Name :</label>
+            <input type="text" name="name" placeholder="Name" value=" <%= user.name %>">
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" name="email" placeholder="Email" value="<%= user.email %>" />
+        </div>
+        <div>
+            <label for="description">Description :</label>
+            <input type="textarea" name="description" placeholder="Describe your self"
+                value="<%= user.description %>" />
+        </div>
+        <div>
+            <label for="addUser">Update User :</label>
+            <input type="submit" name="Update user">
+        </div>
+        </div>
+    </form>
+</body>
+
+</html>
