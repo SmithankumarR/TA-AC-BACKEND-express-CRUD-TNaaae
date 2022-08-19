@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: orange;
+            color: rgb(7, 3, 3);
+            padding: 0.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: rgb(4, 3, 8);
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+       
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: rgb(11, 8, 8);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0 8rem;
+        }
+        article{
+            background-color: rgb(244, 162, 242);
+            color: rgb(10, 2, 2);
+            margin: 0 auto;
+            border: 2px solid;
+            padding: 2rem;
+        }
+        .details{
+            display: block;
+            max-width: 300px;
+            margin: 3rem auto;
+            border-radius: 1rem;
+            border: 2px solid black;
+            padding: 1rem;
+        }
+        .details h4{
+            margin: 0.75rem 0;
+        }
+        .btn{
+           display: block;
+           margin: 1rem 0;
+           padding: 0.75rem 2rem;
+           border: 0;
+           border-radius: 1rem;
+           background-color: orange;
+           font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class = "flex">
+                <li>
+                    <a href="users" target="_blank"> User Diary</a>
+                </li>
+                <li>
+                    <a href="users/new" target="_blank">Add User</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <h1>UserDetails Page</h1>
+        <div class="details">
+            <h2>UserName : <%= user.name %> </h2>
+            <h4> Email :  <%= user.email %>
+        </h4>
+            <p>Description : <%= user.description %> </p>
+            <a href="/books/<%= user.id %>/edit">
+                <button class="btn">Update User</button>
+            </a>
+        </div>
+    </article>
+</body>
+</html>
