@@ -14,7 +14,6 @@ router.post('/', (req, res) => {
 });
 router.get('/', (req, res, next) => {
     User.find({}, (err, users) => {
-        console.log(users)
         if (err) return next(err);
         res.render('user', { users: users });
     })
@@ -33,11 +32,11 @@ router.get('/:id/edit', (req, res, next) => {
         res.render('editForm', { user: user })
     });
 });
-router.put('/:id', (req, res, next) => {
+router.post('/:id', (req, res, next) => {
     var id = req.params.id;
     User.findByIdAndUpdate(id, req.body, (err, Updateduser) => {
         if (err) return next(err);
-        res.redirect('/users/' + id);
+        res.redirect('/users');
     })
 });
 module.exports = router; 
