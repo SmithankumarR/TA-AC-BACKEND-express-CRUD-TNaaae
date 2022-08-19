@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all user</title>
+    <style>
+        .user{
+            max-width: 400px;
+            background-color: blanchedalmond;
+            border: 2px solid saddlebrown;
+            padding: 2rem;
+        }
+        h2,h4,h5{
+            text-transform: capitalize;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: black;
+        }
+        header{
+            background-color: orange;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: orange;
+            margin:2rem;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="flex">
+                <li>
+                    <a href="user.html" target="_blank"> User Diary</a>
+                </li>
+                <li>
+                    <a href="usersForm.ejs" target="_blank">Add User</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="user">
+            <span>Name :</span>
+            <h2><%= user.name %></h2>
+            <span>Email :</span>
+            <h4><%= user.email %></h4>
+            <span>Description :</span>
+            <p><%= user.description %></p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
