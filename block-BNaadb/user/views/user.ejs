@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: orange;
+            color: white;
+            padding: 1.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: orange;
+            margin: 2rem;
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        h2{
+            text-align: center;
+            color: black;
+
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            color: rgb(4, 1, 1);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin: 0 8rem;
+        }
+        li a{
+            color: white;
+            font-size: 1.5rem;
+        }
+        article{
+            color: white;
+            box-shadow: 0 0 10px rgb(159, 155, 155);
+            border-radius: 2rem;
+            margin: 0 auto;
+            border: 2px solid;
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="flex">
+                <li>
+                    <a href="users" target="_blank"> User Diary</a>
+                </li>
+                <li>
+                    <a href="users/new" target="_blank">Add User</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to User diary</h1>
+        <section class="flex">
+            <article>
+                <h2>UserNames :</h2>
+                <% users.forEach(user=> { %>
+                    <a href="/users/<%=  user.id %>">
+                    <h3>
+                        <%= user.name %>
+                    </h3>
+                </a>
+                    <% }) %>
+            </article>
+            <!-- <article>
+                <h2>Email :</h2>
+                <% users.forEach(user=> { %>
+                    <a href="/users/<%=  user.id %>">
+                    <h3>
+                        <%= user.email %>
+                    </h3>
+                </a>
+                    <% }) %>
+            </article>
+            <article>
+                <h2>Description :</h2>
+                <% users.forEach(user=> { %>
+                    <a href="/users/<%=  user.id %>">
+                    <h3>
+                        <%= user.description %>
+                    </h3>
+                </a>
+                    <% }) %>
+            </article> -->
+        </section>
+    </section>
+</body>
+
+</html>
