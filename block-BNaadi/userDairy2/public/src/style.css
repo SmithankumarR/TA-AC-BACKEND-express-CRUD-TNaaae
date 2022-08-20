@@ -1,0 +1,296 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* root variables */
+
+/* my styles */
+html {
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.5;
+}
+
+/* container */
+.container {
+    max-width: 1370px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* custom styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: orange;
+    color: white;
+    padding: 1.5rem;
+
+}
+
+form {
+    max-width: 510px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: rgb(248, 183, 194);
+    border-radius: 1rem;
+    box-shadow: 0 0 14px rgb(148, 198, 248);
+
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    color: rgb(3, 3, 13);
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
+
+input {
+    padding: 0.75rem 2rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: red;
+    margin-top: 2rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a {
+    color: rgb(4, 1, 1);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 8rem;
+
+}
+
+li a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.main-sec {
+    color: white;
+    box-shadow: 0 0 10px rgb(159, 155, 155);
+    border-radius: 2rem;
+    margin: 5rem auto;
+    border: 2px solid;
+    padding: 2rem;
+}
+.main-sec h2{
+    color: rgb(245, 169, 69);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.editForm{
+    max-width: 530px;
+    box-shadow: 0 0 10px rgb(174, 170, 170);
+    margin: 3rem auto;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.singleUser{
+    max-width: 400px;
+    box-shadow: 0 0 10px rgb(174, 170, 170);
+    margin: 2rem auto;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.singleUser h1{
+    text-transform: capitalize;
+    color: blueviolet;
+    margin: 1rem 0;
+}
+.userContent{
+    margin: 2rem ;
+}
+.userContent h2{
+    font-size: 1.6rem;
+}
+.userContent h4{
+   font-size: 1.4rem;
+   margin: 0.5rem 0;
+}
+.userContent p{
+font-size: 1.2rem;
+}
+.btn {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: 0;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+.btn-pri{
+    background-color: orange;
+    color: white;
+}
+.btn-sec{
+    background-color: red;
+    color: white;
+}
+.btn-back {
+    background-color: rgb(105, 210, 105);
+    color: white;
+}
